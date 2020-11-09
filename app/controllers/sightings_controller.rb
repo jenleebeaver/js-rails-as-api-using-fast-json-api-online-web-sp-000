@@ -3,6 +3,7 @@ class SightingsController < ApplicationController
 
   def show
     sighting = Sighting.find(params[:id])
+    #below is creating options variable that includes more data from the objects
     options = {
     include: [:bird, :location]
     }
